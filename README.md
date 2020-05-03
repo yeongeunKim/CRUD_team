@@ -9,5 +9,5 @@
 ## Also , we can search for the course name of my List , and the course name of the exchange list.
 
 # We are team 5 consiting of 김영은 , 김은진 .
-## 김영은 will do "create, read, file save, searchExchange , searchProfessor function".
-## 김은진 will do "update , delete, file load , searchName, searchCredit function" .
+## 김영은 will do "createCourse(), readCourse(), saveData(), searchExchange() , searchProfessor() , listCourse(), selectDataNo() function".
+## 김은진 will do "updateCourse() , deleteCourse(), loadData() , searchName(), searchCredit() , selectMenu() function" .
