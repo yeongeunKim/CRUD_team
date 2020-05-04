@@ -9,6 +9,8 @@ typedef struct{
 
 int creatCourse(Course *s);
 void readCourse(Course *s);
+void updataCourse(Course *s);
+int deleteCourse(Course *s);
 void listCourse(Course *s,int count);
 int selectDataNo(Course *s,int count);
 void saveData(Course *s, int count);
