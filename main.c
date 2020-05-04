@@ -1,7 +1,7 @@
-nclude "manager.h"
+include "manager.h"
 
 int main(){
-    Course c[100];
+    Course s[100];
     int count=0;
     int num;
     count=loadData(c);
@@ -13,23 +13,23 @@ int main(){
         if(menu==1)
         {
             if(count>0)
-            listCourse(c,count);
+            listCourse(s,count);
             else 
             printf("데이터가 없습니다.");
             }
         else if(menu==2){
-            count+=createCourse(&c[count++]);
+            count+=createCourse(&s[count++]);
         }
         else if(menu==3){
-            int no=selectCourseNo(c,count);
+            int no=selectCourseNo(s,count);
             if(no==0){
                 printf("취소됨!\n");
                 continue;
             }
-            updateCourse(&c[count-1]);
+            updateCourse(&s[count-1]);
         }
         else if(menu==4){
-            int no=selectCourseNo(c,count);
+            int no=selectCourseNo(s,count);
             if(no==0){
                 printf("취소됨!\n");
                 continue;
@@ -38,7 +38,7 @@ int main(){
             printf("정말로 삭제하시겠습니까?(삭제:1)");
             scanf("%d",&dok);
             if(dok==1){
-            if (deleteCourse(&c[no-1])){
+            if (deleteCourse(&s[no-1])){
                 count--;
             }
             }
@@ -46,17 +46,17 @@ int main(){
         else if(menu==5){
             if(count==0)printf("데이터가 없습니다 !");
             else{
-            saveData(c,count);
+            saveData(s,count);
             }
         }
         else if(menu==6){
-            searchName(c,count);
+            searchName(s,count);
         }
         else if(menu==7){
-            searchProfessor(c,count);
+            searchProfessor(s,count);
         }
          else if(menu==8){
-            searchCredit(c,count);
+            searchCredit(s,count);
         }
         
 
