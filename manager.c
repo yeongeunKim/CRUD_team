@@ -1,5 +1,20 @@
 #include "manager.h"
 
+int creatCourse(Course *s){
+	printf("과목명은?");
+	getchar();
+	scanf("%[^\n]s",s->courseName);
+	printf("교수님 성함은?");
+	scanf("%[^\n]s",s->proName);
+	printf("전공 또는 교양과목? ");
+	scanf("%[^\n]s",s->major);
+	printf("학점수는?");
+	scanf("%d",&s->credit);
+	return 1;
+}
+void readCourse(Course *s){
+	printf("[ %s ] %s   %s 교수님  ( %d 학점 )",major,courseName,proName,&credit);
+}
 void updateCourse(Course *s){
     printf("과목명은?");
     getchar();
@@ -8,7 +23,7 @@ void updateCourse(Course *s){
     scanf("%[^\n]s",s->proName);
     printf("전공 또는 교양과목? ");
     scanf("%[^\n]s",s->major);
-    printf("학점수?");
+    printf("학점수는?");
     scanf("%[^\n]s",s->credit);
 }
 
