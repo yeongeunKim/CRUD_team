@@ -15,5 +15,6 @@ int deleteCourse(Course *s);
 void listCourse(Course *s,int count);
 int selectDataNo(Course *s,int count);
 void saveData(Course *s, int count);
+void loadData(Course *S);
 void searchProfessor(Course *s, int count);
 void searchMajor(Course *s , int count);

@@ -4,7 +4,7 @@ int main(){
     Course s[100];
     int count=0;
     int num;
-    count=loadData(c);
+    count=loadData(s);
 
     while(1){
         int menu=selectMenu();
