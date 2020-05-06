@@ -8,12 +8,12 @@ typedef struct{
 	int credit;
 } Course;
 
-int creatCourse(Course *s);
-void readCourse(Course *s);
-void updataCourse(Course *s);
+int createCourse(Course *s);
+void readCourse(Course s);
+void updateCourse(Course *s);
 int deleteCourse(Course *s);
 void listCourse(Course *s,int count);
-int selectDataNo(Course *s,int count);
+int selectCourseNo(Course *s,int count);
 void saveData(Course *s, int count);
 void loadData(Course *s);
 void searchProfessor(Course *s, int count);
