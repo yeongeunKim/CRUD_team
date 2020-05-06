@@ -24,7 +24,7 @@ void updateCourse(Course *s){
     printf("전공 또는 교양과목? ");
     scanf("%[^\n]s",s->major);
     printf("학점수는?");
-    scanf("%[^\n]s",s->credit);
+    scanf("%d",&s->credit);
 }
 
 int deleteCourse(Course *s){
@@ -32,6 +32,23 @@ int deleteCourse(Course *s){
     printf("=>삭제됨!\n");
     return 1;
 }
+void listCourse(Course *s,int count){
+	printf("==============================\n");
+	for(int i=0; i<count; i++){
+		if(s[i].credit == -1) continue;
+		printf("%d ",i+1);
+		readCourse(s[i]);
+		}
+	printf("\n");
+	}	
+
+int selectCourseNo(Course *s,int count){
+	int no;
+	listCourse(s,count);
+	printf("번호는 ? (취소 : 0)");
+	scanf("%d",&no);
+	return no;
+	}
 void searchName(Course s[], int count){
     int scount=0;
     char search[20];
