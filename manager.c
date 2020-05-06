@@ -1,6 +1,6 @@
 #include "manager.h"
 
-int creatCourse(Course *s){
+int createCourse(Course *s){
 	printf("과목명은?");
 	getchar();
 	scanf("%[^\n]s",s->courseName);
