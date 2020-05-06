@@ -70,3 +70,24 @@ void searchName(Course s[], int count){
     if(scount==0)printf("=>검색된 데이터 없음!");
     printf("\n");
 }
+void searchCredit(Course s[], int count){
+    int scount=0;
+    int search;
+
+    printf("검색할 학점?");
+    
+    scanf("%d",search);
+
+    for(int i=0; i<count;i++){
+        if(s[i].credit!=-1){
+            if(strstr(s[i].credit,search))
+            {
+                printf("%2d",i+1 );
+                readCourse(s[i]);
+                scount++;
+            }
+        }
+    }
+    if(scount==0)printf("=>검색된 데이터 없음!");
+    printf("\n");
+}

@@ -19,3 +19,4 @@ void loadData(Course *s);
 void searchProfessor(Course *s, int count);
 void searchMajor(Course *s , int count);
 void searchName(Course *s,int count);
+void searchCredit(Course *s,int count);
