@@ -3,7 +3,7 @@ int loadData(Course s[]){
     int count=0;
      FILE *fp;
      fp=fopen("course.txt","rt");
-     \
+     
      if(fp==NULL){
          printf("=>파일 업음\n");
          return 0;
