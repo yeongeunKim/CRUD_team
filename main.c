@@ -58,6 +58,9 @@ int main(){
          else if(menu==8){
             searchCredit(s,count);
         }
+	else if(menu == 9){
+		searchMajor(s,count);
+	}
         
 
     }
