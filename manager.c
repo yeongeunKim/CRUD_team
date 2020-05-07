@@ -3,13 +3,13 @@ int loadData(Course s[]){
     int count=0;
      FILE *fp;
      fp=fopen("course.txt","rt");
-     \
+     
      if(fp==NULL){
          printf("=>파일 업음\n");
          return 0;
      }
      for(;;count++){
-        fscanf(fp,"%s %s %s %d",s[count].courseName,s[count].proName,s[count].major,&s[count].credit);
+        fscanf(fp,"%[^\n]s %s %s %d",s[count].courseName,s[count].proName,s[count].major,&s[count].credit);
        
      if(feof(fp))break;//파일의 끝인지 비교하기
      }
