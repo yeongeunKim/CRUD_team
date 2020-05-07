@@ -1,4 +1,22 @@
 #include "manager.h"
+
+int selectMenu(){
+	int menu;
+	printf("1. 메뉴 조회\n");
+	printf("2. 메뉴 추가\n");
+	printf("3. 메뉴 수정\n");
+	printf("4. 메뉴 삭제\n");
+	printf("5. 수강과목  저장\n");
+	printf("6. 과목명 검색\n");
+	printf("7. 교수님 검색\n");
+	printf("8. 학점 검색\n");
+	printf("9. 교양/전공 검색\n");
+	printf("0. 종료\n");
+	printf("=> 원하는 메뉴는? ");
+	scanf("%d",&menu);
+
+	return menu;
+}
 int loadData(Course s[]){
     int count=0;
      FILE *fp;
@@ -9,7 +27,7 @@ int loadData(Course s[]){
          return 0;
      }
      for(;;count++){
-        fscanf(fp,"%[^\n]s %s %s %d",s[count].courseName,s[count].proName,s[count].major,&s[count].credit);
+        fscanf(fp,"%[^\n]s %c %c %d",s[count].courseName,&s[count].proName,&s[count].major,&s[count].credit);
        
      if(feof(fp))break;//파일의 끝인지 비교하기
      }
@@ -25,7 +43,7 @@ void saveData(Course *s, int count)
     for (int i = 0; i < count; i++)
     {
         if (s[i].credit != -1)
-            fprintf(fp, " %s %s %s %d\n", s[i].courseName, s[i].proName,s[i].major,s[i].credit);
+            fprintf(fp, " %s %c %c %d\n", s[i].courseName, s[i].proName,s[i].major,s[i].credit);
     }
     fclose(fp);
     printf("=>저장됨!\n");
@@ -35,24 +53,24 @@ int createCourse(Course *s){
 	getchar();
 	scanf("%[^\n]s",s->courseName);
 	printf("교수님 성함은?");
-	scanf("%[^\n]s",s->proName);
+	scanf("%c",&s->proName);
 	printf("전공 또는 교양과목? ");
-	scanf("%[^\n]s",s->major);
+	scanf("%c",&s->major);
 	printf("학점수는?");
 	scanf("%d",&s->credit);
 	return 1;
 }
 void readCourse(Course s){
-	printf("[ %s ] %s   %s 교수님  ( %d 학점 )",s.major,s.courseName,s.proName,s.credit);
+	printf("[ %c ] %s   %c 교수님  ( %d 학점 )",s.major,s.courseName,s.proName,s.credit);
 }
 void updateCourse(Course *s){
     printf("과목명은?");
     getchar();
     scanf("%[^\n]s",s->courseName);
     printf("교수님 성함은?");
-    scanf("%[^\n]s",s->proName);
+    scanf("%c",&s->proName);
     printf("전공 또는 교양과목? ");
-    scanf("%[^\n]s",s->major);
+    scanf("%c",&s->major);
     printf("학점수는?");
     scanf("%d",&s->credit);
 }

@@ -3,11 +3,12 @@
 
 typedef struct{
 	char courseName[30];//과목명 저장하는 함수
-	char proName[30];//교수님 성함 저장하는 변수
-	char major[20];//교양인지 전공인지 구분하는 변수
+	char proName;//교수님 성함 저장하는 변수
+	char major;//교양인지 전공인지 구분하는 변수
 	int credit;
 } Course;
 
+int selectMenu();
 int createCourse(Course *s);
 void readCourse(Course s);
 void updateCourse(Course *s);
