@@ -1,5 +1,18 @@
 #include "manager.h"
 
+void saveData(Course *s, int count)
+{
+    FILE *fp;
+    fp = fopen("course.txt", "wt");
+
+    for (int i = 0; i < count; i++)
+    {
+        if (s[i].credit != -1)
+            fprintf(fp, " %s %s %s %d\n", s[i].courseName, s[i].proName,s[i].major,s[i].credit);
+    }
+    fclose(fp);
+    printf("=>저장됨!\n");
+}
 int createCourse(Course *s){
 	printf("과목명은?");
 	getchar();
