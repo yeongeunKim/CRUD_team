@@ -9,7 +9,7 @@ int loadData(Course s[]){
          return 0;
      }
      for(;;count++){
-        fscanf(fp,"%s %s %s %d",s[count].courseName,s[count].proName,s[count].major,&s[count].credit);
+        fscanf(fp,"%[^\n]s %s %s %d",s[count].courseName,s[count].proName,s[count].major,&s[count].credit);
        
      if(feof(fp))break;//파일의 끝인지 비교하기
      }
