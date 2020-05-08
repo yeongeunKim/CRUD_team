@@ -118,6 +118,7 @@ void searchName(Course s[], int count){
     if(scount==0)printf("=>검색된 데이터 없음!");
     printf("\n");
 }
+/*
 void searchCredit(Course s[], int count){
     int scount=0;
     int search;
@@ -138,4 +139,4 @@ void searchCredit(Course s[], int count){
     }
     if(scount==0)printf("=>검색된 데이터 없음!");
     printf("\n");
-}
+}*/
