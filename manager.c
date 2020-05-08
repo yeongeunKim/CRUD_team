@@ -147,4 +147,3 @@ void searchMajor(Course *s,int count){
 
 }
 
-void searchCredit(Course *s,int count);
