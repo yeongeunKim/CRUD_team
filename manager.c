@@ -140,3 +140,11 @@ void searchCredit(Course s[], int count){
     if(scount==0)printf("=>검색된 데이터 없음!");
     printf("\n");
 }*/
+void searchCourseName(Course *s,int count){
+
+}
+void searchMajor(Course *s,int count){
+
+}
+
+void searchCredit(Course *s,int count);
