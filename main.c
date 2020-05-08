@@ -50,7 +50,7 @@ int main(){
             }
         }
         else if(menu==6){
-            searchName(s,count);
+            searchCourseName(s,count);
         }
         else if(menu==7){
             searchProfessor(s,count);
