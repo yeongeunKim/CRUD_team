@@ -6,10 +6,10 @@ int selectMenu(){
 	printf("2. 메뉴 추가\n");
 	printf("3. 메뉴 수정\n");
 	printf("4. 메뉴 삭제\n");
-	printf("5. 수강과목  저장\n");
+	printf("5. 수강과목 저장\n");
 	printf("6. 과목명 검색\n");
-	printf("7. 교수님 검색\n");
-	printf("8. 학점 검색\n");
+	printf("7. 교수님 성함 검색\n");
+	printf("8. 학점수 검색\n");
 	printf("9. 교양/전공 검색\n");
 	printf("0. 종료\n");
 	printf("=> 원하는 메뉴는? ");
