@@ -152,7 +152,7 @@ void searchProfessor(Course *s,int count){
 		if(s[i].credit !=-1){
 			if(strstr(s[i].proName,search)){
 				printf("%d",i+1);
-				readProduct(s[i]);
+				readCourse(s[i]);
 				scount++;				
 			}		
 		}			
