@@ -27,7 +27,7 @@ int loadData(Course s[]){
          return 0;
      }
      for(;;count++){
-        fscanf(fp,"%[^\n]s %c %c %d",s[count].courseName,&s[count].proName,&s[count].major,&s[count].credit);
+        fscanf(fp,"%[^\n]s %s %s %d",s[count].courseName,&s[count].proName,&s[count].major,&s[count].credit);
        
      if(feof(fp))break;//파일의 끝인지 비교하기
      }
@@ -68,9 +68,9 @@ void updateCourse(Course *s){
     getchar();
     scanf("%[^\n]s",s->courseName);
     printf("교수님 성함은?");
-    scanf("%c",&s->proName);
+    scanf("%s",s->proName);
     printf("전공 또는 교양과목? ");
-    scanf("%c",&s->major);
+    scanf("%s",s->major);
     printf("학점수는?");
     scanf("%d",&s->credit);
 }
