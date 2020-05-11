@@ -43,7 +43,7 @@ void saveData(Course *s, int count)
     for (int i = 0; i < count; i++)
     {
         if (s[i].credit != -1)
-            fprintf(fp, " %s %c %c %d\n", s[i].courseName, s[i].proName,s[i].major,s[i].credit);
+            fprintf(fp, " %s %s %s %d\n", s[i].courseName, s[i].proName,s[i].major,s[i].credit);
     }
     fclose(fp);
     printf("=>저장됨!\n");
@@ -53,16 +53,20 @@ int createCourse(Course *s){
 	getchar();
 	scanf("%[^\n]s",s->courseName);
 	printf("교수님 성함은?");
+<<<<<<< HEAD
 	scanf("%c",&s->proName);
 	
+=======
+	scanf("%s",s->proName);
+>>>>>>> 94938227af79ab12f719122e4c098781c07ae843
 	printf("전공 또는 교양과목? ");
-	scanf("%c",&s->major);
+	scanf("%s",s->major);
 	printf("학점수는?");
 	scanf("%d",&s->credit);
 	return 1;
 }
 void readCourse(Course s){
-	printf("[ %c ] %s   %c 교수님  ( %d 학점 )",s.major,s.courseName,s.proName,s.credit);
+	printf("[ %s ] %s   %s 교수님  ( %d 학점 )",s.major,s.courseName,s.proName,s.credit);
 }
 void updateCourse(Course *s){
     printf("과목명은?");
@@ -146,14 +150,14 @@ void searchCredit(Course s[], int count){
 }
 void searchProfessor(Course *s,int count){
 	int scount = 0;
-	char search;
+	char search[30];
 
 	printf("검색하고 싶은 교수님 성함을 입력하시오.\n ");
-	scanf("%c", &search);
+	scanf("%s", search);
 	printf("==============================\n");
 	for(int i=0;i<count;i++){
 		if(s[i].credit !=-1){
-			if(s[i].proName == search){
+	            if(strstr(s[i].proName,search)){
 				printf("%2d",i+1);
 				readCourse(s[i]);
 				scount++;				
@@ -165,14 +169,14 @@ void searchProfessor(Course *s,int count){
 }
 void searchMajor(Course *s,int count){
 	int scount = 0;
-	char search;
+	char search[10];
 
 	printf("검색하고 싶은 교수님 성함을 입력하시오.\n ");
-	scanf("%c",&search);
+	scanf("%s",search);
 	printf("==============================\n");
 	for(int i= 0;i<count;i++){
 		if(s[i].credit != -1){
-			if(s[i].major == search){
+	            if(strstr(s[i].major,search)){
 				printf("%2d",i+1);
 				readCourse(s[i]);
 				scount++;
