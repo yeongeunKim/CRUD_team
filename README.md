@@ -9,4 +9,4 @@
 
 # We are team 5 consiting of 김영은 , 김은진 .
  김영은 will do "createCourse(), readCourse(), saveData(), searchProfessor() , searchmajor(), listCourse(), selectDataNo(),selectMenu() function".
- 김은진 will do "updateCourse() , deleteCourse(), loadData() , searchName(), searchCredit() , main.c function" .
+ 김은진 will do "updateCourse() , deleteCourse(), loadData() , searchName(), searchCredit() , main.c , .gitignore function" .
