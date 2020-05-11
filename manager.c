@@ -54,6 +54,7 @@ int createCourse(Course *s){
 	scanf("%[^\n]s",s->courseName);
 	printf("교수님 성함은?");
 	scanf("%c",&s->proName);
+	
 	printf("전공 또는 교양과목? ");
 	scanf("%c",&s->major);
 	printf("학점수는?");
