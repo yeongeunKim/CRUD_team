@@ -101,10 +101,11 @@ void searchName(Course s[], int count){
     int scount=0;
     char search[20];
 
-    printf("검색할 과목명?");
+    printf("검색하고 싶은 과목명을 입력하시오.\n");
     getchar();
     scanf("%[^\n]s",search);
 
+    printf("==============================\n");
     for(int i=0; i<count;i++){
         if(s[i].credit!=-1){
             if(strstr(s[i].courseName,search))
@@ -123,10 +124,11 @@ void searchCredit(Course s[], int count){
     int scount=0;
     int search;
 
-    printf("검색할 학점?");
+    printf("검색하고 싶은 학점수를 입력하시오.\n");
     
     scanf("%d",&search);
 
+    printf("==============================\n");
     for(int i=0; i<count;i++){
         if(s[i].credit!=-1){
             if(s[i].credit==search)
@@ -145,13 +147,13 @@ void searchProfessor(Course *s,int count){
 	int scount = 0;
 	char search;
 
-	printf("검색하고 싶은 교수님 성함을 입력하시오. ");
+	printf("검색하고 싶은 교수님 성함을 입력하시오.\n ");
 	scanf("%c", &search);
 	printf("==============================\n");
 	for(int i=0;i<count;i++){
 		if(s[i].credit !=-1){
 			if(s[i].proName == search){
-				printf("%d",i+1);
+				printf("%2d",i+1);
 				readCourse(s[i]);
 				scount++;				
 			}		
@@ -159,4 +161,23 @@ void searchProfessor(Course *s,int count){
 	}
     if(scount==0)printf("=>검색된 데이터 없음!");
     printf("\n");
+}
+void searchMajor(Course *s,int count){
+	int scount = 0;
+	char search;
+
+	printf("검색하고 싶은 교수님 성함을 입력하시오.\n ");
+	scanf("%c",&search);
+	printf("==============================\n");
+	for(int i= 0;i<count;i++){
+		if(s[i].credit != -1){
+			if(s[i].major == search){
+				printf("%2d",i+1);
+				readCourse(s[i]);
+				scount++;
+			}
+		}
+	}	
+	if(scount == 0) printf("=>검색된 데이터 없음!");
+	printf("\n");
 }
