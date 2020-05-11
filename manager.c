@@ -143,14 +143,14 @@ void searchCredit(Course s[], int count){
 }
 void searchProfessor(Course *s,int count){
 	int scount = 0;
-	char search[30];
+	char search;
 
 	printf("검색하고 싶은 교수님 성함을 입력하시오. ");
-	scanf("%s", search);
+	scanf("%c", &search);
 	printf("==============================\n");
 	for(int i=0;i<count;i++){
 		if(s[i].credit !=-1){
-			if(strstr(s[i].proName,search)){
+			if(s[i].proName == search){
 				printf("%d",i+1);
 				readCourse(s[i]);
 				scount++;				
