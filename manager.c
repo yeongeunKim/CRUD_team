@@ -61,7 +61,7 @@ int createCourse(Course *s){
 	return 1;
 }
 void readCourse(Course s){
-	printf("[ %s ] %s   %s 교수님  ( %d 학점 )",s.major,s.courseName,s.proName,s.credit);
+	printf("[ %s ] %s %s교수님 ( %d 학점 )\n",s.major,s.courseName,s.proName,s.credit);
 }
 void updateCourse(Course *s){
     printf("과목명은?");
