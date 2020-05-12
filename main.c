@@ -3,8 +3,9 @@
 int main(){
     Course s[100];
     int count=0;
-    int num;
+    int curcount =0;
     count=loadData(s);
+    curcount = count;
 
     while(1){
         int menu=selectMenu();
@@ -13,20 +14,20 @@ int main(){
         if(menu==1)
         {
             if(count>0)
-            listCourse(s,count);
+            listCourse(s,curcount);
             else 
             printf("데이터가 없습니다.");
             }
         else if(menu==2){
-            count+=createCourse(&s[count++]);
+            count+=createCourse(&s[curcount++]);
         }
         else if(menu==3){
-            int no=selectCourseNo(s,count);
+            int no=selectCourseNo(s,curcount);
             if(no==0){
                 printf("취소됨!\n");
                 continue;
             }
-            updateCourse(&s[count-1]);
+            updateCourse(&s[no-1]);
         }
         else if(menu==4){
             int no=selectCourseNo(s,count);
@@ -46,20 +47,20 @@ int main(){
         else if(menu==5){
             if(count==0)printf("데이터가 없습니다 !");
             else{
-            saveData(s,count);
+            saveData(s,curcount);
             }
         }
         else if(menu==6){
-            searchName(s,count);
+            searchName(s,curcount);
         }
         else if(menu==7){
-            searchProfessor(s,count);
+            searchProfessor(s,curcount);
         }
          else if(menu==8){
-            searchCredit(s,count);
+            searchCredit(s,curcount);
         }
 	else if(menu == 9){
-		searchMajor(s,count);
+		searchMajor(s,curcount);
 	}
         
 
