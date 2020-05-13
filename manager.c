@@ -48,7 +48,7 @@ void saveData(Course *s, int count)
     fclose(fp);
     printf("=>저장됨!\n");
 }
-int createCourse(Course *s){
+int createCourse(Course *s){//수강과목 리스트 추가하는 한수
 	printf("과목명은?");
 	getchar();
 	scanf("%[^\n]s",s->courseName);
@@ -60,7 +60,7 @@ int createCourse(Course *s){
 	scanf("%d",&s->credit);
 	return 1;
 }
-void readCourse(Course s){
+void readCourse(Course s){//수강과모 리스트 조회하는 한수
 	printf("[ %s ] %s %s교수님 ( %d 학점 )\n",s.major,s.courseName,s.proName,s.credit);
 }
 void updateCourse(Course *s){
@@ -80,7 +80,7 @@ int deleteCourse(Course *s){
     printf("=>삭제됨!\n");
     return 1;
 }
-void listCourse(Course *s,int count){
+void listCourse(Course *s,int count){//수강과목리스트를 나열하여 보여주는 함수
 	printf("==============================\n");
 	for(int i=0; i<count; i++){
 		if(s[i].credit == -1) continue;
@@ -90,7 +90,7 @@ void listCourse(Course *s,int count){
 	printf("\n");
 	}	
 
-int selectCourseNo(Course *s,int count){
+int selectCourseNo(Course *s,int count){//수강 과목 리스트 중 번호 선택하는 함수
 	int no;
 	listCourse(s,count);
 	printf("번호는 ? (취소 : 0)");
@@ -143,7 +143,7 @@ void searchCredit(Course s[], int count){
     if(scount==0)printf("=>검색된 데이터 없음!");
     printf("\n");
 }
-void searchProfessor(Course *s,int count){
+void searchProfessor(Course *s,int count){//수강과목 리스트 중에서 교수님 성함을 검색하여 찾는 함수
 	int scount = 0;
 	char search[30];
 
@@ -162,7 +162,7 @@ void searchProfessor(Course *s,int count){
     if(scount==0)printf("=>검색된 데이터 없음!");
     printf("\n");
 }
-void searchMajor(Course *s,int count){
+void searchMajor(Course *s,int count){//수강 과목 리스트 중에서 교양 또는 전공 과목을 찾는 함수
 	int scount = 0;
 	char search[10];
 
