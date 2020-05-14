@@ -30,9 +30,11 @@ int loadData(Course s[]){
 	
         fscanf(fp,"%d",&s[count].credit);
 	fgets(s[count].courseName,sizeof(s[count].courseName),fp);
+s[count].courseName[strlen(s[count].courseName)]='\0';
        	fgets(s[count].proName,sizeof(s[count].proName),fp);
+s[count].proName[strlen(s[count].proName)]='\0';
 	fgets(s[count].major,sizeof(s[count].major),fp);
-	//s[count].major[strlen(s[count].major)]='\0';
+s[count].major[strlen(s[count].major)]='\0';
 printf("hello");
      if(feof(fp))break;//파일의 끝인지 비교하기
      }
