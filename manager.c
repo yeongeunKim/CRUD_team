@@ -17,7 +17,7 @@ int selectMenu(){
 
 	return menu;
 }
-int loadData(Course s[]){
+int loadData(Course *s){
     int count=0;
      FILE *fp;
      fp=fopen("course.txt","rt");
@@ -27,12 +27,11 @@ int loadData(Course s[]){
          return 0;
      }
      for(;;count++){
-        fscanf(fp,"%[^\n]s %s %s %d",s[count].courseName,s[count].proName,s[count].major,&s[count].credit);
-       
+        fscanf(fp,"%d %s %s %[^\n]s",&s[count].credit,s[count].proName,s[count].major,s[count].courseName);
      if(feof(fp))break;//파일의 끝인지 비교하기
      }
      fclose(fp);
-     printf("=>로딩 성공!");
+     printf("=>로딩 성공!\n");
     return count;
 }
 void saveData(Course *s, int count)
@@ -43,7 +42,7 @@ void saveData(Course *s, int count)
     for (int i = 0; i < count; i++)
     {
         if (s[i].credit != -1)
-            fprintf(fp, " %s %s %s %d\n", s[i].courseName, s[i].proName,s[i].major,s[i].credit);
+            fprintf(fp, " %d %s %s %s\n", s[i].credit, s[i].proName,s[i].major,s[i].courseName);
     }
     fclose(fp);
     printf("=>저장됨!\n");
