@@ -8,5 +8,5 @@
  수강과목 이름이나, 교수님, 학점을 검색하여 찾을 수 도 있습니다.
 
 # We are team 5 consiting of 김영은 , 김은진 .
- 김영은 will do "createCourse(), readCourse(), saveData(), searchProfessor() , searchmajor(), listCourse(), selectDataNo(),selectMenu() function".
- 김은진 will do "updateCourse() , deleteCourse(), loadData() , searchName(), searchCredit() , main.c , .gitignore function" .
+ 김영은 will do "createCourse(), readCourse(), saveData(), searchProfessor() , searchmajor(), listCourse(), selectDataNo(),selectMenu(), Makefile(매크로버전) function".
+ 김은진 will do "updateCourse() , deleteCourse(), loadData() , searchName(), searchCredit() , main.c , .gitignore , Makefile(일반버전) function" .
