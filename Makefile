@@ -9,11 +9,11 @@
 CC = gcc
 CFLAGS = -W -Wall
 TARGET = course
-OBJECTS = main.c manager.c
+OBJECTS = main.c manager.o
 
 all : $(TARGET)
 
-$(TARGET) :$(OBJECTS)
+$(TARGET) : $(OBJECTS)
 	$(CC) $(CFLAGS) -o $@ $^
 clean :
 	rm *.o course

@@ -12,7 +12,7 @@ int main(){
         if(menu==0) break;
 
         if(menu==1)
-        {  printf("%d\n",count);
+        {  
             if(count>0)
             listCourse(s,curcount);
             else 
