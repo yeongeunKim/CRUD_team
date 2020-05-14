@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ##course: main.c manager.o 
 ##	gcc -o course main.c manager.o 
 ##manager.o : manager.c manager.h
@@ -8,7 +6,6 @@
 ##	rm *.o 
 
 
->>>>>>> ba86081ab6a10c425d52a8bd2cab4023e257a11f
 CC = gcc
 CFLAGS = -W -Wall
 TARGET = course
@@ -21,7 +18,3 @@ $(TARGET) :$(OBJECTS)
 clean :
 	rm *.o course
 
-<<<<<<< HEAD
-=======
-
->>>>>>> ba86081ab6a10c425d52a8bd2cab4023e257a11f
