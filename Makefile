@@ -18,4 +18,3 @@ $(TARGET) :$(OBJECTS)
 clean :
 	rm *.o course
 
-

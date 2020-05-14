@@ -53,7 +53,7 @@ int createCourse(Course *s){//수강과목 리스트 추가하는 한수
 	scanf("%[^\n]s",s->courseName);
 	printf("교수님 성함은?");
 	scanf("%s",s->proName);
-	printf("전공 또는 교양과목? ");
+	printf("전공 또는 교양과목?(1.전공 2.교양");
 	scanf("%s",s->major);
 	printf("학점수는?");
 	scanf("%d",&s->credit);
