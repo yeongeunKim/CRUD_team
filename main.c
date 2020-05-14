@@ -12,11 +12,11 @@ int main(){
         if(menu==0) break;
 
         if(menu==1)
-        {
+        {  printf("%d\n",count);
             if(count>0)
             listCourse(s,curcount);
             else 
-            printf("데이터가 없습니다.");
+            printf("데이터가 없습니다\n");
             }
         else if(menu==2){
             count+=createCourse(&s[curcount++]);

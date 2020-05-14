@@ -27,13 +27,17 @@ int loadData(Course s[]){
          return 0;
      }
      for(;;count++){
-	 fgets(s[count].courseName,sizeof(p[count].courseName,fp);
-        fscanf(fp,"%s %s %d",s[count].proName,s[count].major,&s[count].credit);
-       
+	
+        fscanf(fp,"%d",&s[count].credit);
+	fgets(s[count].courseName,sizeof(s[count].courseName),fp);
+       	fgets(s[count].proName,sizeof(s[count].proName),fp);
+	fgets(s[count].major,sizeof(s[count].major),fp);
+	//s[count].major[strlen(s[count].major)]='\0';
+printf("hello");
      if(feof(fp))break;//파일의 끝인지 비교하기
      }
      fclose(fp);
-     printf("=>로딩 성공!");
+     printf("=>로딩 성공!\n");
     return count;
 }
 void saveData(Course *s, int count)
@@ -44,7 +48,8 @@ void saveData(Course *s, int count)
     for (int i = 0; i < count; i++)
     {
         if (s[i].credit != -1)
-            fprintf(fp, " %s %s %s %d\n", s[i].courseName, s[i].proName,s[i].major,s[i].credit);
+            fprintf(fp, "%d %s %s %s\n",s[i].credit,s[i].courseName,s[i].proName,s[i].major);
+		
     }
     fclose(fp);
     printf("=>저장됨!\n");
